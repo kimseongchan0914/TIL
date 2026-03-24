@@ -332,6 +332,202 @@ System.out.println(result);
 
 ---
 
+# 📌 Java Scanner
+
+## Scanner란?
+
+**Scanner**는 사용자로부터 **입력을 받기 위한 클래스**이다.
+키보드로 값을 입력받아 변수에 저장할 때 사용한다.
+
+---
+
+## Scanner 사용 방법
+
+Scanner를 사용하려면 먼저 import가 필요하다.
+
+```java id="s2k9q1"
+import java.util.Scanner;
+```
+
+객체 생성
+
+```java id="x8d2lm"
+Scanner sc = new Scanner(System.in);
+```
+
+---
+
+## 입력 받기
+
+| 메서드          | 설명           |
+| ------------ | ------------ |
+| nextInt()    | 정수 입력        |
+| nextDouble() | 실수 입력        |
+| next()       | 문자열(한 단어) 입력 |
+| nextLine()   | 문자열(한 줄) 입력  |
+
+예시
+
+```java id="a7p3zm"
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int age = sc.nextInt();
+        String name = sc.next();
+
+        System.out.println(age);
+        System.out.println(name);
+    }
+}
+```
+
+---
+
+## 주의할 점
+
+`nextInt()` 다음에 `nextLine()`을 사용할 때는 **엔터가 남아서 문제가 생길 수 있다.**
+
+```java id="p6n2rk"
+int num = sc.nextInt();
+sc.nextLine(); // 엔터 제거
+
+String str = sc.nextLine();
+```
+# 📌 Java 배열 (Array)
+
+## 배열이란?
+
+**배열(Array)** 은 같은 자료형의 데이터를 **여러 개 저장할 수 있는 자료구조**이다.
+여러 개의 값을 하나의 변수로 관리할 수 있다.
+
+---
+
+## 배열 선언 방법
+
+배열은 다음과 같이 선언한다.
+
+```java id="k3m8qp"
+자료형[] 배열이름 = new 자료형[크기];
+```
+
+예시
+
+```java id="w7d2ls"
+int[] arr = new int[3];
+```
+
+---
+
+## 배열 초기화
+
+배열을 선언하면서 값을 바로 넣을 수도 있다.
+
+```java id="n5z8yx"
+int[] arr = {10, 20, 30};
+```
+
+---
+
+## 배열 사용
+
+배열은 **인덱스(index)** 를 사용하여 값을 저장하고 꺼낸다.
+인덱스는 **0부터 시작**한다.
+
+```java id="p4c9ut"
+int[] arr = {10, 20, 30};
+
+System.out.println(arr[0]); // 10
+System.out.println(arr[1]); // 20
+
+arr[2] = 50; // 값 변경
+```
+
+---
+
+## 반복문과 배열
+
+배열은 반복문과 함께 자주 사용된다.
+
+```java id="z8q1mv"
+int[] arr = {10, 20, 30};
+
+for (int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
+```
+# 📌 Java 메서드 (Method)
+
+## 메서드란?
+
+**메서드(Method)** 는 특정 기능을 수행하는 **코드의 묶음**이다.
+코드를 반복해서 사용할 수 있어 프로그램을 더 효율적으로 만들 수 있다.
+
+---
+
+## 메서드 선언 방법
+
+메서드는 다음과 같이 선언한다.
+
+```java id="d9k2qw"
+반환타입 메서드이름(매개변수) {
+    실행할 코드
+}
+```
+
+예시
+
+```java id="x3p7mv"
+public static void hello() {
+    System.out.println("Hello");
+}
+```
+
+---
+
+## 메서드 호출
+
+메서드는 호출해야 실행된다.
+
+```java id="k8z1rt"
+public class Main {
+    public static void main(String[] args) {
+
+        hello(); // 메서드 호출
+
+    }
+
+    public static void hello() {
+        System.out.println("Hello");
+    }
+}
+```
+
+---
+
+## 매개변수와 반환값
+
+메서드는 값을 전달받고 결과를 반환할 수 있다.
+
+```java id="u4m9lc"
+public static int add(int a, int b) {
+    return a + b;
+}
+```
+
+사용 예시
+
+```java id="h7q2xn"
+int result = add(3, 5);
+System.out.println(result); // 8
+```
+
+
+
+
 
 
 
