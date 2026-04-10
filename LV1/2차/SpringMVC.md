@@ -4,7 +4,7 @@
 Spring MVC는 자바 기반 웹 애플리케이션을 만들기 위한 **웹 프레임워크**이다.  
 MVC 패턴(Model-View-Controller)을 기반으로 구성되어 있으며, 역할을 나누어 코드의 유지보수성과 확장성을 높인다.
 
----
+
 
 ## 2. MVC 패턴 구조
 
@@ -20,9 +20,9 @@ MVC 패턴(Model-View-Controller)을 기반으로 구성되어 있으며, 역할
 - 사용자의 요청을 받아 처리
 - Model과 View를 연결하는 역할
 
----
 
-## 3. Spring MVC 동작 흐름
+
+## 3. SpringMVC 동작 흐름
 
 1. 클라이언트가 HTTP 요청을 보냄
 2. DispatcherServlet이 요청을 받음
@@ -32,7 +32,7 @@ MVC 패턴(Model-View-Controller)을 기반으로 구성되어 있으며, 역할
 6. View로 결과 전달
 7. 최종 응답을 클라이언트에게 반환
 
----
+
 
 ## 4. 핵심 구성 요소
 
@@ -49,7 +49,7 @@ MVC 패턴(Model-View-Controller)을 기반으로 구성되어 있으며, 역할
 ### View Resolver
 - 어떤 View를 사용할지 결정
 
----
+
 
 ## 5. 주요 어노테이션
 
@@ -65,7 +65,7 @@ MVC 패턴(Model-View-Controller)을 기반으로 구성되어 있으며, 역할
 ### @ResponseBody
 - 데이터를 JSON 형태로 반환
 
----
+
 
 ## 6. 코드 예시
 
