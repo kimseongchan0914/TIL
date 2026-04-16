@@ -1,4 +1,4 @@
-# 📌 Java HTTP / HTTPS
+#  Java HTTP / HTTPS
 
 ## HTTP란?
 
