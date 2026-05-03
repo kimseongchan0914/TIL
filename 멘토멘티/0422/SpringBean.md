@@ -1,4 +1,4 @@
-# Spring Bean / IoC / DI 한 번에 정리 (TIL)
+# Spring Bean / IoC / DI 
 
 ## 공부해야 하는 이유
 
