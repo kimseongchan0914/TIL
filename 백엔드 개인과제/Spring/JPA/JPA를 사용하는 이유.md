@@ -1,7 +1,57 @@
 # JPA를 사용하는 이유
+### JPA는 객체지향 프로그래밍과 관계형 데이터베이스 사이의 차이를 해결하고 개발자가 객체 중심으로 개발할수 있도록 도움을 준다.
 
-![JDBC and JPA flow comparison](./images/image-6.png)
+# 1. SQL 작성량 감소
+JDBC를 사용할경우 데이터를 저장,조회,수정,삭제 할때 마다 SQL을 직접 작성해야한다.
+![alt text](image.png)
+![alt text](image-1.png)
 
-![JDBC code example](./images/image-7.png)
+### JPA는 객체 정보를 분석하여 필요한 SQL을 자동으로 생성하고 실행한다.
 
-![JPA code example](./images/image-5.png)
+## 장점
+* 반복적인 SQL 작성 감소
+* 코드 간결화
+* 개발 생산성 향상
+
+# 2. 객체 중심 개발
+JDBC는 데이터베이스를 중심으로 개발하지만, JPA는 객체 중심으로 개발한다.
+![alt text](image-2.png)
+
+개발자는 SQL보다 객체와 비지니스 로직에 집중할수있다.
+
+# 3. 객체와 데이터베이스의 패러다임 불일치 해결
+객체와 관계형 데이터베이스는 구조가 다르다.
+
+## 객체
+* 객체(Object)
+* 상속(Inheritance)
+* 참조(Reference)
+## 관계형 데이터베이스
+* 테이블(Table)
+* 기본 키(Primary Key)
+* 외래 키(Foreign Key)
+
+# 4. 유지 보수 향상
+데이터베이스 구조가 변경되면 JDBC에서는 관련된 SQL 코드를 모두 수정해야한다.
+예를 들어 Member 테이블에 email 컬럼이 추가되면 모든 INSERT, SELECT, UPDATE SQL을 수정해야 한다. 하지만 JPA에서는 Entity만 수정하면 대부분의 SQL이 자동으로 변경된다.
+
+### 장점
+* 코드 수정 범위 감소
+* 유지보수 비용 절감
+
+# 5. 영속성 컨텍스트 제공
+JPA는 영속성 컨텍스트를 통해 Entity객체를 관리한다.
+
+### 6. 영속성 컨텍스트의 기능
+* 1차 캐시
+* 변경 감지(Dirty Checking)
+* 쓰기 지연(Write Behind)
+* 동일성 보장
+
+# 7. 트랜잭션 관리
+JPA는 트랜잭션과 함께 동작한다.
+
+트랜잭션이 성공하면 commit()을 통해 변경사항을 데이터베이스에 반영한다. 오류가 발생하면 rollback()을 통해 이전상태로 되돌린다.
+
+이를 통해 데이터의 무결성을 보장할수있다.
+
